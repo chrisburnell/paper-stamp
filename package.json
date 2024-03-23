@@ -1,0 +1,33 @@
+{
+  "name": "@chrisburnell/paper-stamp",
+  "version": "0.0.1",
+  "description": "A Web Component to display an img as a paper stamp.",
+  "main": "paper-stamp.js",
+  "scripts": {
+    "start": "npx http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisburnell/paper-stamp.git"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "components",
+    "web components",
+    "custom elements"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisburnell/paper-stamp/issues"
+  },
+  "author": {
+    "name": "Chris Burnell",
+    "email": "me@chrisburnell.com",
+    "url": "https://chrisburnell.com/"
+  },
+  "homepage": "https://github.com/chrisburnell/paper-stamp#readme"
+}

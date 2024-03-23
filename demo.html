@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Demo of paper-stamp Web Component" />
+    <title>paper-stamp Web Component Demo</title>
+
+    <style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+        }
+      }
+    </style>
+    <script type="module" src="paper-stamp.js"></script>
+  </head>
+  <body>
+    <h2>General usage example</h2>
+    <paper-stamp>
+      <img src="https://chrisburnell.com/images/avatar@2x.jpeg" alt="My face">
+    </paper-stamp>
+    <h2>Custom stamp color</h2>
+    <paper-stamp color="red">
+      <img src="https://chrisburnell.com/images/avatar@2x.jpeg" alt="My face">
+    </paper-stamp>
+    <h2>Custom stamp padding</h2>
+    <paper-stamp padding="50px">
+      <img src="https://chrisburnell.com/images/avatar@2x.jpeg" alt="My face">
+    </paper-stamp>
+    <h2>Custom stamp perforation size</h2>
+    <paper-stamp perforation="8px">
+      <img src="https://chrisburnell.com/images/avatar@2x.jpeg" alt="My face">
+    </paper-stamp>
+    <h2>Custom stamp perforation spacing multiplier</h2>
+    <paper-stamp spacing="6">
+      <img src="https://chrisburnell.com/images/avatar@2x.jpeg" alt="My face">
+    </paper-stamp>
+    <style>
+      paper-stamp:not(:defined) {
+        background-color: whitesmoke;
+        padding: 15px;
+      }
+    </style>
+  </body>
+</html>
