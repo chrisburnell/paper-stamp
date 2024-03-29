@@ -1,6 +1,6 @@
 {
   "name": "@chrisburnell/paper-stamp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Web Component to display an img as a paper stamp.",
   "main": "paper-stamp.js",
   "scripts": {

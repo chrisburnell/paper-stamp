@@ -11,9 +11,9 @@ class PaperStamp extends HTMLElement {
         radial-gradient(
           calc(var(--stamp-perforation, 15px) / 2),
           transparent 95%,
-          var(--stamp-color, whitesmoke)
+          var(--stamp-color, papayawhip)
         ),
-        linear-gradient(var(--stamp-color, whitesmoke) 0 0);
+        linear-gradient(var(--stamp-color, papayawhip) 0 0);
       background-size:
         calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2) calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2),
         calc(100% - var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2) calc(100% - var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2);
@@ -28,7 +28,7 @@ class PaperStamp extends HTMLElement {
     }
     :host img {
       display: block;
-      margin: var(--stamp-padding, 15px);
+      padding: var(--stamp-padding, 15px);
     }
   `
 
