@@ -25,10 +25,10 @@ class PaperStamp extends HTMLElement {
         no-repeat;
       max-inline-size: 100%;
       display: inline-block;
-      padding: var(--stamp-padding, 15px);
     }
     :host img {
       display: block;
+      margin: var(--stamp-padding, 15px);
     }
   `
 
