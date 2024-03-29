@@ -9,16 +9,16 @@ class PaperStamp extends HTMLElement {
     :host {
       background-image:
         radial-gradient(
-          calc(var(--stamp-perforation, 15px) / 2),
+          calc(var(--stamp-perforation, 8px) / 2),
           transparent 95%,
           var(--stamp-color, papayawhip)
         ),
         linear-gradient(var(--stamp-color, papayawhip) 0 0);
       background-size:
-        calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2) calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2),
-        calc(100% - var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2) calc(100% - var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / 2);
+        calc(var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / 2) calc(var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / 2),
+        calc(100% - var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / 2) calc(100% - var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / 2);
       background-position:
-        calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / -4) calc(var(--stamp-perforation, 15px) * var(--stamp-spacing, 3.5) / -4),
+        calc(var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / -4) calc(var(--stamp-perforation, 8px) * var(--stamp-spacing, 3.5) / -4),
         50%;
       background-repeat:
         round,
