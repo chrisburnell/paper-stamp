@@ -6,12 +6,52 @@ A Web Component to display an img as a paper stamp
 
 ## Examples
 
-General usage example:
+### General usage example
 
 ```html
 <script type="module" src="paper-stamp.js"></script>
 
 <paper-stamp>
+  <img src="example.jpg" alt="">
+</paper-stamp>
+```
+
+### Custom stamp color
+
+```html
+<script type="module" src="paper-stamp.js"></script>
+
+<paper-stamp color="cyan">
+  <img src="example.jpg" alt="">
+</paper-stamp>
+```
+
+### Custom stamp padding
+
+```html
+<script type="module" src="paper-stamp.js"></script>
+
+<paper-stamp padding="50px">
+  <img src="example.jpg" alt="">
+</paper-stamp>
+```
+
+### Custom stamp perforation size
+
+```html
+<script type="module" src="paper-stamp.js"></script>
+
+<paper-stamp perforation="15px">
+  <img src="example.jpg" alt="">
+</paper-stamp>
+```
+
+### Custom stamp perforation spacing multiplier
+
+```html
+<script type="module" src="paper-stamp.js"></script>
+
+<paper-stamp spacing="6">
   <img src="example.jpg" alt="">
 </paper-stamp>
 ```

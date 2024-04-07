@@ -25,6 +25,7 @@ class PaperStamp extends HTMLElement {
         no-repeat;
       max-inline-size: 100%;
       display: inline-block;
+      image-rendering: pixelated;
     }
     :host img {
       display: block;
@@ -35,12 +36,7 @@ class PaperStamp extends HTMLElement {
   static observedAttributes = ["color", "padding", "perforation", "spacing"]
 
   connectedCallback() {
-    if (!this.querySelector("img").getAttribute("src")) {
-      console.error(`Missing \`src\` attribute!`, this)
-      return
-    }
-
-    this.init()
+    this.initTemplate()
   }
 
   getBaseCSS() {
@@ -51,7 +47,7 @@ class PaperStamp extends HTMLElement {
 
   setCSS() {
     let stylesheets = [this.getBaseCSS()]
-    if (this.hasAttribute("color")) {
+    if (this.hasAttribute("color") && this.getAttribute("color") !== "") {
       let sheet = new CSSStyleSheet()
       sheet.replaceSync(`
         :host {
@@ -60,7 +56,7 @@ class PaperStamp extends HTMLElement {
       `)
       stylesheets.push(sheet)
     }
-    if (this.hasAttribute("padding")) {
+    if (this.hasAttribute("padding") && this.getAttribute("padding") !== "") {
       let sheet = new CSSStyleSheet()
       sheet.replaceSync(`
         :host {
@@ -69,7 +65,7 @@ class PaperStamp extends HTMLElement {
       `)
       stylesheets.push(sheet)
     }
-    if (this.hasAttribute("perforation")) {
+    if (this.hasAttribute("perforation") && this.getAttribute("perforation") !== "") {
       let sheet = new CSSStyleSheet()
       sheet.replaceSync(`
         :host {
@@ -78,7 +74,7 @@ class PaperStamp extends HTMLElement {
       `)
       stylesheets.push(sheet)
     }
-    if (this.hasAttribute("spacing")) {
+    if (this.hasAttribute("spacing") && this.getAttribute("spacing") !== "") {
       let sheet = new CSSStyleSheet()
       sheet.replaceSync(`
         :host {
@@ -106,7 +102,7 @@ class PaperStamp extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 
-  async init() {
+  attributeChangedCallback() {
     this.initTemplate()
   }
 }
